@@ -1,0 +1,293 @@
+/* --- Botón hamburguesa --- */
+.menu-toggle {
+  display: none;               /* Oculto por defecto (solo aparece en móviles) */
+  background: none;            /* Sin fondo */
+  border: none;                /* Sin borde */
+  font-size: 28px;             /* Tamaño del ícono ☰ */
+  color: white;                /* Color del ícono */
+  cursor: pointer;             /* Cursor cambia al pasar por encima */
+}
+
+/* --- Diseño adaptativo (solo se aplica en pantallas pequeñas) --- */
+@media (max-width: 768px) {
+  /* Mostramos el botón cuando el ancho sea menor a 768px */
+  .menu-toggle {
+    display: block;
+  }
+
+  /* Ocultamos el menú por defecto en móviles */
+  .cositas {
+    display: none;             /* No se muestra hasta que se haga clic */
+    flex-direction: column;    /* Los enlaces se apilan verticalmente */
+    background-color: black;   /* Fondo negro para el menú desplegable */
+    width: 100%;               /* Ocupar todo el ancho */
+    position: absolute;        /* Se posiciona sobre el contenido */
+    top: 70px;                 /* Se ubica justo debajo del header */
+    left: 0;                   /* Alineado a la izquierda */
+    text-align: center;        /* Centra el texto */
+    padding: 10px 0;           /* Espaciado interno */
+  }
+
+  /* Cuando se agrega la clase .show, el menú se muestra */
+  .cositas.show {
+    display: flex;             /* Cambia de "none" a "flex" para hacerlo visible */
+  }
+
+  /* Estilo de los enlaces dentro del menú en móvil */
+  .cositas a {
+    margin: 10px 0;            /* Espaciado entre enlaces */
+  }
+}
+
+.header{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 5px;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    max-height: 75px;
+    position: fixed; /* Fija el header en pantalla */
+    top: 0;          /* Lo coloca en la parte superior */
+    left: 0;         /* Alineado al borde izquierdo */
+    width: 100%;     /* Que ocupe todo el ancho */
+    z-index: 1000;   /* Para que quede por encima del resto */
+}
+.header a{
+    margin: 10px;
+    text-decoration: none;
+    color: white;
+    transition: background-color 0.4s ease, transform 0.3s ease;
+}
+.header a:hover{
+    background-color: rgb(141, 141, 141);
+    transform: scale(1.1);
+}
+.logo img{
+    max-width: 200px;   
+    height: auto;
+    margin: 0;
+    display: block;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    text-align: center;
+}
+
+h1 {
+    margin-top: 40px;
+}
+.texto img{
+    max-width: 400px;
+    max-height: 250px;
+    padding: 10px;
+}
+
+.historia{
+    padding: 50px;
+}
+
+.footer {
+    background-color: #000;  
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.footer h2 {
+    margin-bottom: 15px;
+    font-size: 24px;
+}
+
+.footer ul {
+    padding: 0;
+}
+
+.footer ul li {
+    margin: 8px 0;
+}
+
+.footer a {
+    color: #00bfff;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    text-align: center;
+    margin: 0;
+    padding-top: 100px; /* Ajustá según la altura real del header */
+}
+
+.discografia img{
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    max-width: 250px;
+    max-height: 250px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.card img:hover {
+    transform: scale(1.1);
+}
+.conciertos {
+  color: rgb(0, 0, 0);
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.conciertos h1 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #b30000;
+}
+
+.conciertos p {
+  font-size: 18px;
+  line-height: 1.8;
+  margin-bottom: 30px;
+  color: #000;
+}
+
+.integrantes {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.integrantes h1 {
+  font-size: 32px;
+  margin-bottom: 40px;
+  color: #b30000;
+}
+
+.galeria-integrantes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+
+.integrante {
+  width: 220px;
+  text-align: center;
+}
+
+.integrante img {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.integrante img:hover {
+  transform: scale(1.1);
+}
+
+.integrante p {
+  margin-top: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #222;
+}
+
+.integrante span {
+  font-size: 14px;
+  color: #555;
+}
+.disco {
+  display: inline-block;
+  margin: 20px;
+  text-align: center;
+}
+
+.disco img {
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+  max-width: 220px;
+  height: auto;
+}
+
+.disco img:hover {
+  transform: scale(1.1);
+}
+
+.disco p {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #222;
+}
+
+.disco span {
+  font-size: 14px;
+  color: #666;
+}
+
+.presentacion img{
+  box-shadow: 0 2px 5px rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.presentacion img:hover{
+  transform: scale(1.1);
+}
+
+.historia h1{
+  color: #b30000;
+}
+
+.texto h1{
+  color: #b30000;
+}
+.discografia h1{
+  color: #b30000;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: black;  /* Fondo negro */
+    text-align: center;
+    margin: 0;
+    padding-top: 100px; /* Ajustá según la altura del header */
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgb(41, 38, 38); /* fondo de la pagina*/
+    color: white;       /* color letra */
+    text-align: center;
+    margin: 0;
+    padding-top: 100px;
+}s
+.conciertos {
+  color: white;
+}
+
+.conciertos p {
+  color: white;
+}
+
+.integrante p {
+  color: white;
+}
+
+.integrante span {
+  color: white;
+}
+
+.disco p {
+  color: white;
+}
+
+.disco span {
+  color: white;
+}
